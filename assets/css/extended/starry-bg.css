@@ -1,0 +1,146 @@
+:root {
+    --theme: #0a0a14;
+    --entry: #12122a;
+    --primary: #c8d6e5;
+    --secondary: #8899aa;
+    --tertiary: #1e1e3a;
+    --content: #d0d8e8;
+    --code-block-bg: #0d0d20;
+    --code-bg: #151530;
+    --border: #1a1a3a;
+    color-scheme: dark;
+}
+
+body {
+    background: #0a0a14;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:
+        radial-gradient(1px 1px at 5% 8%, #fff3, transparent),
+        radial-gradient(1px 1px at 12% 15%, #fff2, transparent),
+        radial-gradient(1px 1px at 22% 5%, #fff3, transparent),
+        radial-gradient(1.5px 1.5px at 28% 22%, #fff4, transparent),
+        radial-gradient(1px 1px at 35% 12%, #fff2, transparent),
+        radial-gradient(1px 1px at 42% 28%, #fff3, transparent),
+        radial-gradient(1.5px 1.5px at 48% 8%, #fff4, transparent),
+        radial-gradient(1px 1px at 55% 18%, #fff2, transparent),
+        radial-gradient(1px 1px at 62% 32%, #fff3, transparent),
+        radial-gradient(1.5px 1.5px at 68% 6%, #fff4, transparent),
+        radial-gradient(1px 1px at 75% 25%, #fff2, transparent),
+        radial-gradient(1px 1px at 82% 14%, #fff3, transparent),
+        radial-gradient(1.5px 1.5px at 88% 20%, #fff4, transparent),
+        radial-gradient(1px 1px at 92% 10%, #fff2, transparent),
+        radial-gradient(1px 1px at 8% 45%, #7ef3, transparent),
+        radial-gradient(1.5px 1.5px at 18% 38%, #7ef4, transparent),
+        radial-gradient(1px 1px at 32% 55%, #7ef2, transparent),
+        radial-gradient(1px 1px at 45% 42%, #7ef3, transparent),
+        radial-gradient(1.5px 1.5px at 58% 50%, #7ef4, transparent),
+        radial-gradient(1px 1px at 72% 48%, #7ef2, transparent),
+        radial-gradient(1px 1px at 85% 40%, #7ef3, transparent),
+        radial-gradient(1px 1px at 15% 70%, #fff2, transparent),
+        radial-gradient(1.5px 1.5px at 25% 65%, #fff3, transparent),
+        radial-gradient(1px 1px at 40% 72%, #fff2, transparent),
+        radial-gradient(1px 1px at 52% 68%, #fff3, transparent),
+        radial-gradient(1px 1px at 65% 75%, #fff2, transparent),
+        radial-gradient(1.5px 1.5px at 78% 62%, #fff3, transparent),
+        radial-gradient(1px 1px at 90% 70%, #fff2, transparent),
+        radial-gradient(1px 1px at 20% 85%, #7ef2, transparent),
+        radial-gradient(1px 1px at 38% 90%, #fff3, transparent),
+        radial-gradient(1.5px 1.5px at 55% 82%, #7ef3, transparent),
+        radial-gradient(1px 1px at 70% 88%, #fff2, transparent),
+        radial-gradient(1px 1px at 83% 92%, #7ef2, transparent),
+        radial-gradient(200px 200px at 20% 20%, #1515ff08, transparent),
+        radial-gradient(200px 200px at 80% 80%, #1515ff06, transparent),
+        radial-gradient(150px 150px at 50% 50%, #1a1a5505, transparent);
+}
+
+@keyframes twinkle1 {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.9; }
+}
+
+@keyframes twinkle2 {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.1; }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(2px 2px at 10% 10%, #fff9, transparent),
+        radial-gradient(1px 1px at 30% 25%, #fff6, transparent),
+        radial-gradient(2px 2px at 60% 15%, #fff8, transparent),
+        radial-gradient(1px 1px at 80% 30%, #fff6, transparent),
+        radial-gradient(2px 2px at 45% 60%, #fff8, transparent),
+        radial-gradient(1px 1px at 15% 75%, #fff6, transparent),
+        radial-gradient(2px 2px at 70% 70%, #fff9, transparent),
+        radial-gradient(2px 2px at 25% 50%, #7ef8, transparent),
+        radial-gradient(1px 1px at 55% 40%, #7ef6, transparent),
+        radial-gradient(2px 2px at 85% 55%, #7ef9, transparent);
+    animation: twinkle1 4s ease-in-out infinite;
+}
+
+.entry-content, .post-content, .page-content {
+    color: #d0d8e8;
+}
+
+.post-entry {
+    background: #12122a;
+    border: 1px solid #1a1a3a;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.post-entry:hover {
+    border-color: #3333aa;
+    box-shadow: 0 0 20px #3333aa33;
+}
+
+.header {
+    background: #0a0a14dd;
+    backdrop-filter: blur(10px);
+}
+
+.footer {
+    background: #0a0a14dd;
+}
+
+a {
+    color: #7eaaff;
+}
+
+a:hover {
+    color: #aaccff;
+}
+
+code {
+    background: #151530;
+    color: #7ecfff;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+pre {
+    background: #0d0d20;
+    border: 1px solid #1a1a3a;
+    border-radius: 8px;
+}
+
+.entry-hint-parent {
+    color: #c8d6e5;
+}
